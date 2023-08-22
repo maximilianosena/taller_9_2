@@ -16,8 +16,15 @@ function guardar_Texto(){
  localStorage.setItem("Frases", JSON.stringify(array))
 }
 
-btn.addEventListener("click", ingresar);
-btn.addEventListener("click", guardar_Texto);
+
+function clickear(){
+ingresar();
+guardar_Texto();
+texto.value=""
+}
+
+btn.addEventListener("click", clickear);
+
 
 function obtenerInfo(){
     let info = localStorage.getItem("Frases")
